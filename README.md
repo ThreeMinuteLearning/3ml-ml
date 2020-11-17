@@ -4,20 +4,22 @@ Use machine learning to find the "nearest neighbours" for each story in our data
 
 # Setup
 
-## Turicreate needs python 3.7 or earlier
-
-Later versions don't work. On Arch linux, you need to build and install python 3.7 [from the AUR](https://aur.archlinux.org/packages/python37/).
-
-## Use virtualenv to setup python 3.7 for the project
+## Use virtualenv to setup python for the project
 
 ```
-virtualenv -p python3.7 ml-env
+virtualenv ml-venv
 
 source ./ml-venv/bin/activate
 
 pip install jupyterlab
 
 pip install --upgrade turicreate
+```
+
+Or use the `requirements.txt` file to avoid any dependency incompatibilities:
+
+```
+pip install -r requirements.txt
 ```
 
 # Extract story data as a CSV file
