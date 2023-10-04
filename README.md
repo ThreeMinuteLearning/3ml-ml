@@ -4,20 +4,15 @@ Use machine learning to find the "nearest neighbours" for each story in our data
 
 # Setup
 
-## Use virtualenv to setup python for the project
+## Use venv to setup python for the project
 
 ```
-virtualenv ml-venv
-
-source ./ml-venv/bin/activate
-
-pip install jupyterlab
-
-pip install --upgrade turicreate
+$ python -m venv ./venv
+$ source ./venv/bin/activate(.fish)
+$ pip install jupyterlab scikit-learn pandas nltk
 ```
 
-Or use the `requirements.txt` file to avoid any dependency incompatibilities:
-
+Or use the requirements file (created using `pip freeze`) if you have problems:
 ```
 pip install -r requirements.txt
 ```
@@ -35,15 +30,8 @@ psql --csv -d my3ml -o stories.csv -c 'select id,title,content from story'
 ```
 source ./ml-venv/bin/activate
 
-jupyter notebook
+jupyter-lab 3ml_stories.ipynb
 ```
 
 Use the browser to open the notebook.
-
-# Turicreate
-
-This is the ML library used.
-
-- [User guide](https://apple.github.io/turicreate/docs/userguide/)
-- [API docs](https://apple.github.io/turicreate/docs/api/index.html)
 

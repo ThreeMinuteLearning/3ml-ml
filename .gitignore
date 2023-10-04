@@ -1,1 +1,5 @@
 stories.csv
+.ipynb_checkpoints/
+features.txt
+stories_nn.json
+venv/
